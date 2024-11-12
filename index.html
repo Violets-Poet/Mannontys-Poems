@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/flower.png" type="image/png">
+    <link rel="stylesheet" href="styles_index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+    <title>Mannonty's Poems</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title ihw">To you, <span class="ihw toYou">Mannonty,</span><br> I love you</h1>
+
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+                    <div class="decorated-text">Table Of Contents</div>
+                    <div class="inner-container">
+
+                        <a href="./Poems/XXII.html"> <span id="" class="TocTitle">
+                            <span class="poemTitle">XXII</span>
+                            <span class="leaders" aria-hidden="true"></span></span> 
+                            <span class="TocPage">2</span>
+                        </a>
+
+                        <a href="./Poems/convWMoon.html"> <span id="" class="TocTitle">
+                            <span class="poemTitle">The Last Conversation with the Moon</span>
+                            <span class="leaders" aria-hidden="true"></span></span>
+                            <span class="TocPage">4</span>
+                        </a>
+
+                        <a href="./Poems/To Her.html"> <span id="" class="TocTitle">
+                            <span class="poemTitle">To Her</span>
+                            <span class="leaders" aria-hidden="true"></span></span>
+                            <span class="TocPage" style="font-family: 'Courier New', Courier, monospace;">#</span>
+                        </a>
+
+                        <a href="./Poems/aSight.html"> <span id="" class="TocTitle">
+                            <span class="poemTitle">A Sight That Makes My Heart Melt</span>
+                            <span class="leaders" aria-hidden="true"></span></span>
+                            <span class="TocPage">6</span>
+                        </a>
+
+                    </div>
+                    <div class="decend" style="font-size: 0.65rem !important; color: #b4b4b4;"><span
+                            class="tilde">~</span>LYTTMATSAPTEEEOTU<span class="tilde">~</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        };
+    </script>
+
+</body>
+
+</html>

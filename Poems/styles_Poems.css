@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'TaylorSwiftHandwriting';
+    src: url('../assets/TaylorSwiftHandwriting.ttf') format('truetype');
+    /* You may include additional font formats for better cross-browser compatibility */
+}
+
+@font-face {
+    font-family: 'italicHandwriting';
+    src: url('../assets/ConeriaScriptDemo-Jrdx.ttf') format('truetype');
+    /* You may include additional font formats for better cross-browser compatibility */
+}
+
+body :not(i) {
+    margin: 0;
+    font-family: 'TaylorSwiftHandwriting', sans-serif;
+    overflow: hidden;
+    /* Hide content overflow during animation */
+}
+
+.ihw{
+    font-family: 'italicHandwriting', serif;
+}
+
+strong {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.right-aligned-text{
+    text-align: right;
+}
+
+.center-alligned-text{
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 4em;
+}
+
+.background-color {
+    background-color: #0a0a2a;
+    z-index: 2;
+}
+
+.background-image {
+    background-image: url('../assets/gray.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeInBackground 3s ease-in forwards;
+    /* Animation for background image */
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+        /* Initial opacity to 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* Final opacity to 1 */
+    }
+}
+
+.loaded {
+    background-color: rgba(10, 10, 42, 1);
+    /* Set the background color after the fade-in */
+}
+
+.title {
+    color: rgba(10, 10, 42, 0.8);
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+    margin-top: 5.5vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.translucent-box {
+    background-color: rgba(10, 10, 42, 0.7);
+    position: absolute;
+    padding: 10px 20px 10px;
+    max-width: 60%;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 55%;
+    transform: translate(0, -50%);
+    max-height: 50vh;
+}
+
+.inner-container{
+    overflow-y: auto;
+    max-height: 35vh;
+}
+
+@media screen and (min-width: 720px) {
+    .title{
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Style for WebKit-based browsers (Chrome, Safari) */
+    .inner-container::-webkit-scrollbar {
+        width: 7px;
+        margin-right: 10px;
+    }
+
+    .inner-container::-webkit-scrollbar-track {
+        background-color: transparent;
+        margin-right: 5px;
+        /* Make the track transparent */
+    }
+
+    .inner-container::-webkit-scrollbar-thumb {
+        background-color: #808080;
+        /* Color of the scrollbar thumb */
+        border-radius: 6px;
+        /* Round the corners of the thumb */
+        width: 1vw;
+
+    }
+
+    .navigation-links{
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+.translucent-box p {
+    color: #fff;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.translucent-box strong {
+    font-weight: bold;
+    color: #fff;
+}
+
+.endHeart{
+    text-align: right;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    font-size: 2.5rem !important;
+}
+
+#endHeart{
+    cursor: pointer;
+}
+
+
+/* Add the styles for the "November" text with decorations */
+.decorated-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b4b4b4;
+    font-size: 1.25rem;
+    /* 10% smaller than 1.5rem */
+    margin-bottom: 10px;
+}
+
+.decorated-text::before,
+.decorated-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #b4b4b4;
+    margin: 0 10px;
+}
+
+.decorated-text::before {
+    margin-right: 10px;
+    margin-left: 6.25rem;
+}
+
+.decorated-text::after {
+    margin-left: 10px;
+    margin-right: 6.25rem;
+}
+
+/* Navigation links above the copy button */
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.navigation-links i {
+    color: #E3E3E3;
+    text-decoration: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#flower_btn_icon{
+    width: 2rem;
+    cursor: pointer;
+}
+ 
+/* Centered copy button */
+.copy-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.copy-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.copy-button i {
+    font-size: 2rem;
+}
+
+hr {
+    width: 50%;
+    margin-left: 25% !important;
+    margin-top: 0.5% !important;
+    /* Center the <hr> within its container */
+    border-color: #E3E3E3;
+    color: #E3E3E3;
+    background-color: #E3E3E3;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a2a;
+    /* Adjust the background color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+#main-content {
+    display: none;
+}
+
+#bgc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a2a;
+    /* Adjust the background color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: -2;
+}
+
+.long_secret_message{
+    margin-top: 4vh;
+    font-size: 2rem;
+}
+
+.flowerBtn {
+    background-color: transparent;
+    border: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .tab {
+            display: inline-block;
+            margin-left: 2em;
+        }
+
+    .inner-container{
+        max-height: 30vh;
+    }
+
+    .translucent-box {
+        margin-top: 15vh;
+        overflow-y: auto;
+        max-height: 50vh;
+        max-width: 70%;
+        top: 45%;
+    }
+
+    .translucent-box p {
+        font-size: 1.25rem;
+    }
+
+    .title {
+        margin-top: 10vh;
+        font-size: 1.75rem;
+    }
+    .long_secret_message{
+        margin-top: 9vh;
+        font-size: 1.5rem;
+    }
+
+    .ihw {
+        font-size: 1.1rem !important;
+    }
+
+    .decorated-text::before {
+        margin-right: 10px;
+        margin-left: 2rem;
+    }
+
+    .decorated-text::after {
+        margin-left: 10px;
+        margin-right: 2rem;
+    }
+
+    .decorated-text{
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .endHeart{
+        font-size: 1.6rem;
+    }
+
+    hr{
+        margin-top: 0.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+

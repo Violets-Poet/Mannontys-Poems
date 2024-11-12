@@ -1,0 +1,323 @@
+@font-face {
+    font-family: 'TaylorSwiftHandwriting';
+    src: url('./assets/Taylor\ Swift\ Handwriting.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'italicHandwriting';
+    src: url('./assets/ConeriaScriptDemo-Jrdx.ttf') format('truetype');
+    /* You may include additional font formats for better cross-browser compatibility */
+}
+
+
+.otherFonts{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ihw {
+    font-family: 'italicHandwriting', serif;
+}
+
+body :not(i) {
+    margin: 0;
+    font-family: 'TaylorSwiftHandwriting', sans-serif;
+    overflow: hidden;
+}
+
+strong {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: rgba(10, 10, 42, 0.8);
+}
+
+.background-color {
+    background-color: #0a0a2a;
+    z-index: 2;
+}
+
+.background-image {
+    background-image: url('./assets/gray.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeInBackground 3s ease-in forwards;
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.loaded {
+    background-color: rgba(10, 10, 42, 1);
+}
+
+.title {
+    color: rgba(10, 10, 42, 0.8);
+    text-align: center;
+    font-size: 4rem;
+    padding: 20px;
+    margin-top: 5vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.translucent-box {
+    background-color: rgba(10, 10, 42, 0.7);
+    position: absolute;
+    padding: 10px 20px 10px;
+    min-width: 60%;
+    max-width: 80%;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 60%;
+    transform: translate(0, -50%);
+    max-height: 40vh;
+}
+
+.inner-container{
+    overflow-y: auto;
+    max-height: 30vh;
+}
+
+@media screen and (min-width: 720px) {
+
+    /* Style for WebKit-based browsers (Chrome, Safari) */
+    .inner-container::-webkit-scrollbar {
+        width: 7px;
+        margin-right: 10px;
+    }
+
+    .inner-container::-webkit-scrollbar-track {
+        background-color: transparent;
+        margin-right: 5px;
+        /* Make the track transparent */
+    }
+
+    .inner-container::-webkit-scrollbar-thumb {
+        background-color: #808080;
+        /* Color of the scrollbar thumb */
+        border-radius: 6px;
+        /* Round the corners of the thumb */
+        width: 1vw;
+
+    }
+
+}
+
+.translucent-box a {
+    color: #E3E3E3;
+    font-size: 1.5rem;
+    text-decoration: none;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 10px 0;
+    /* position: relative; */
+    cursor: pointer;
+}
+
+.translucent-box a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+
+.decorated-text,
+.decend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b4b4b4;
+    font-size: 1.25rem;
+    /* 10% smaller than 1.5rem */
+    margin-bottom: 10px;
+}
+
+.decorated-text::before,
+.decorated-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #b4b4b4;
+    margin: 0 10px;
+}
+
+.decorated-text::before {
+    margin-right: 10px;
+    margin-left: 6.25rem;
+}
+
+.decorated-text::after {
+    margin-left: 10px;
+    margin-right: 6.25rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .translucent-box {
+        top: 60%;
+        overflow-y: auto;
+        max-height: 40vh;
+    }
+
+    .title {
+        margin-top: 6.5vh;
+        font-size: 2.25rem;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .toYou {
+        font-size: 3.5rem;
+    }
+    
+
+    .translucent-box a {
+        font-size: 1.25rem;
+    }
+
+
+    .decorated-text::before {
+        margin-right: 10px;
+        margin-left: 2rem;
+    }
+
+    .decorated-text::after {
+        margin-left: 10px;
+        margin-right: 2rem;
+    }
+
+    .decorated-text {
+        font-size: 1rem;
+        margin-bottom: 1.3rem;
+    }
+
+    .tilde {
+        font-size: 2rem !important;
+        font-family: serif;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .center-paragraph {
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: center;
+        max-width: 60%;
+        font-size: 1.5rem;
+    }
+}
+
+.tilde {
+    font-size: 2.5rem;
+    font-family: serif;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+hr {
+    width: 50%;
+    margin-left: 25% !important;
+    margin-top: 2.5% !important;
+    border-color: #E3E3E3;
+    color: #E3E3E3;
+    background-color: #E3E3E3;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+#main-content {
+    display: none;
+}
+
+#bgc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: -2;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.inner-container  a{
+    display: grid;
+    grid-template-columns: auto max-content;
+    align-items: end;
+}
+
+.inner-container  a > .TocPage{
+    min-width: 2ch;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.inner-container  a > .TocTitle{
+    position: relative;
+    overflow: hidden;
+}
+
+.inner-container  a .leaders::after{
+    position: absolute;
+    padding-left: .75ch;
+    padding-right: .5ch;
+    content: " . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . . . . "
+        ". . . . . . . . . . . . . . . . . . . . . . . ";
+    text-align: right;
+}
+
+.inner-container a:hover .leaders::after{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.inner-container .poemTitle{
+    max-width: 90%;
+}

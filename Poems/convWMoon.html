@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/flower.png" type="image/png">
+    <link rel="stylesheet" href="./styles_Poems.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>The Last Conversation with the Moon</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title" id="mainHeading">The Last Conversation with the Moon</h1>
+
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+
+                    <!-- Add the decorated month -->
+                    <div class="decorated-text">November</div>
+                    <div class="inner-container"><p><span class="tab"></span>"You cheated on me!" cried the moon, "I can't believe you cheated on me!"<br>
+                        <span class="tab"></span>"What did I do?"<br>
+                        <span class="tab"></span>"Even though you said it under the sun - when I wasn't there, when you thought I couldn't
+                        hear you - I saw you that night," sorrow filled its voice, "I put on my most dazzling stars for you, I cleared away
+                        all my clouds for you, and you still didn't - and you still couldn't take your eyes off of here!"<br><br>
+                    
+                        <span class="tab"></span>The moon paced around. Apparently, I had hurt it. Apparently, I was in the wrong? But I
+                        knew I wasn't. What did it expect?<br><br>
+                    
+                        <span class="tab"></span>"Oh, how many times have you told her, 'Isn't the moon pretty?' And every time, like a
+                        fool, I thought you were talking about me. Oh, how stupid of me. I should've seen the signs! I should've been
+                        jealous from the start!"<br>
+                        <span class="tab"></span>"Yes, you should have! You should always be jealous of her!" The words left my mouth before
+                        I could think. Not that I could think straight with her on my mind anyway. "She's perfect! Her beauty is perfect!
+                        Everything about her is perfect! How could anything not be jealous of her!"
+                        <br>
+                        <br>
+                        <span class="tab"></span>The moon cried. I knew how it felt. It cried like the countless times I wanted to cry over
+                        her - like the one time I actually did. And just like me then, it couldn't stop crying. The air got heavy with its
+                        sad and cold tears, just like my heart did with mine back then.
+                        <br>
+                        <br>
+                        <span class="tab"></span>"You said it, didn't you? You told her she's more beautiful than me?"
+                        <br>
+                        <span class="tab"></span>"She <span class="ihw">is</span> more beautiful than you!"
+                        <br>
+                        <span class="tab"></span>"How could you? How could you - you who never breaks a word - break your vow to me! You're
+                        just like the rest of them-"
+                        <br>
+                        <span class="tab"></span>"Do NOT compare me to them! I would never throw your name in vain. I would never run about
+                        and call every other girl beautiful, let alone more beautiful than you. But her... there's no one and nothing even
+                        remotely close to how beautiful and lovely she is. Not even you."
+                        <br>
+                        <br>
+                        <span class="tab"></span>The moon sobbed. "Is she worth it? Is she worth the pain that I can clearly see you're in
+                        because of her? Is she worth you crying when I know nothing else can make you cry? Is she worth the time, energy,
+                        and mental space you give her? Is she worth the overflow of emotions? Even now as you're writing, I'm no longer
+                        'Luna,' I'm just 'The moon.' I'm no longer 'her,' I'm not even a <span class="ihw">she</span>, I'm an 'it!' Is she worth throwing away all
+                        the poems you wrote for me? All the poetry you said in my name? Throwing away our time together? Is she worth our
+                        relationship? Is she worth it?"
+                        <br>
+                        <br>
+                        <span class="tab"></span>"She's worth it and so much more! She's worth more than everything I own and everything I
+                        am. She's worth living for, even if it means I'll be in constant pain and agony. As long as she's there, even if
+                        from afar, then a life, even in this pain, is better than death, even for me."
+                        <br>
+                        <span class="tab"></span>"And what about all those dark nights when I was the only one there for you? What about-"
+                        <br>
+                        <span class="tab"></span>"She's worth it! She's worth it all! She's worth so much more! I love her! I love her more
+                        than I've ever loved you! I love her more than I thought I'm even capable of loving something or someone! I love her
+                        more than what should be possible! I love her!"
+                        <br>
+                        <br>
+                        <span class="tab"></span>The moon refused to speak further. I don't think it will ever talk to me again.
+                        <br>
+                        <br>
+                        <p class="right-aligned-text">
+                            I don't care.
+                            <br>
+                            I love her.
+                        </p>
+                        <br>
+                        <p class="endHeart"><span id="endHeart">🤍</span></p>
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="navigation-links">
+                        <a href="./XXII.html"><i class="fa-solid fa-left-long"></i></a>
+                        <button class="flowerBtn" onclick="handleClick()">
+                            <img src="../assets/flower.png" alt="" id="flower_btn_icon">
+                        </button>
+                        <a href="./aSight.html"><i class="fa-solid fa-right-long"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        };
+
+        let clickTimer;
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+            if (clickCount === 1) {
+                clickTimer = setTimeout(function () {
+                    // Single-click detected, execute the redirect
+                    window.location.href = "../flower.html";
+                    clickCount = 0; // Reset the click count
+                }, 300); // Delay for detecting a double-click
+            } else if (clickCount === 2) {
+                clearTimeout(clickTimer); // Prevent the redirect if it's a double-click
+                copyToClipboard();
+                clickCount = 0; // Reset the click count
+            }
+        }
+
+        function copyToClipboard() {
+            const textToCopy = document.getElementById('translucentBox').innerText;
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            console.log("Poem copied successfully, my love!");
+        }
+
+        document.getElementById('endHeart').addEventListener('click', function () {
+                var heading = document.getElementById('mainHeading');
+                // Toggle between the original title and the new text
+                if (heading.innerHTML === "The Last Conversation with the Moon") {
+                    heading.innerHTML = "I love you even more now,<br>I Love you to the moon and to saturn and past the ever-expanding edge of the universe<br>You're my love, my heart, and my everything 💙";
+                    heading.classList.toggle("long_secret_message");
+                } else {
+                    heading.innerHTML = "The Last Conversation with the Moon";
+                    heading.classList.toggle("long_secret_message");
+                }
+            });
+    </script>
+
+</body>
+
+</html>

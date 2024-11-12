@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/flower.png" type="image/png">
+    <link rel="stylesheet" href="./styles_Poems.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>To Her</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title" id="mainHeading">To Her</h1>
+
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+
+                    <!-- Add the decorated month -->
+                    <div class="decorated-text">December</div>
+
+                        <div class="inner-container">
+                            <p class="ihw center-alligned-text">
+                                “Tyger tyger burning bright<br>
+                                In the forest of the night<br>
+                                What mortal hand or eye<br>
+                                Could frame thy fearful symmetry.”<br>
+                                ~William Blake
+                            </p>
+                            
+                            <br><br>
+                            
+                            <p>
+                                <span class="tab"></span> A common misconception is that the artistry of a piece depends on the talent of the
+                                artist. In reality, it’s mostly dependent on the muse, an artist cannot bring out something that isn’t already in
+                                their muse, and a good muse could help even the most mediocre artist seem brilliant. In that sense, all artists and
+                                writers, painters and poets, composers and sculptors were unfortunate to not have come across her.
+                            </p>
+                            
+                            <br><br>
+                            
+                            <p class="ihw center-alligned-text">
+                                O Angel, O goddess shining through<br>
+                                The dark corners that were all I knew<br>
+                                What random coincident could conceive thy unfathomable beauty<br>
+                                What mortal mind or eye could perceive its never-ending magnitude,
+                            </p>
+                            
+                            <br><br>
+                            
+                            <p>
+                                <span class="tab"></span> She is the most beautiful person ever. Nothing, nothing else could challenge her beauty.
+                                No other person or object or even an idea – a thought without a physical form could compare. She is beauty itself;
+                                she radiates addictive beauty. Her presence makes the ugliest of things beautiful, and her absence makes the most
+                                beautiful things unbearably ugly.
+                            </p>
+                            
+                            <br><br>
+                            
+                            <p class="ihw center-alligned-text">
+                                Flawlessly made to perfect strokes<br>
+                                No painter on Earth could provoke<br>
+                                Perfection on legs, magnificence personified<br>
+                                Evoking all kinds of feelings like a riptide,
+                            </p>
+                            
+                            <br><br>
+                            
+                            <p>
+                                <span class="tab"></span>“She sounds perfect.” A person said once.<br>
+                                <span class="tab"></span>“She is perfect. She is perfection.” He replied.<br>
+                                <span class="tab"></span>“But no one is perfect!” Another person cried.<br>
+                                <span class="tab"></span>“I guess… I guess she made a mistake once.” He replied, “She once said, “All women are beautiful.” But one look at
+                                her renders all others repulsively ugly. Only she is beautiful.”
+                            </p>
+                            
+                            <br>
+                            
+                            <p class="endHeart"><span id="endHeart">🤍</span></p>
+                        </div>
+                    <hr>
+
+                    <!-- Add navigation links above the copy button -->
+                    <div class="navigation-links">
+                        <a href="./convWMoon.html"><i class="fa-solid fa-left-long"></i></a>
+                        <button class="flowerBtn" onclick="handleClick()">
+                            <img src="../assets/flower.png" alt="" id="flower_btn_icon">
+                        </button>
+                        <a href="./aSight.html"><i class="fa-solid fa-right-long"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        };
+
+        let clickTimer;
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+            if (clickCount === 1) {
+                clickTimer = setTimeout(function () {
+                    // Single-click detected, execute the redirect
+                    window.location.href = "../flower.html";
+                    clickCount = 0; // Reset the click count
+                }, 300); // Delay for detecting a double-click
+            } else if (clickCount === 2) {
+                clearTimeout(clickTimer); // Prevent the redirect if it's a double-click
+                copyToClipboard();
+                clickCount = 0; // Reset the click count
+            }
+        }
+
+        function copyToClipboard() {
+            const textToCopy = document.getElementById('translucentBox').innerText;
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            console.log("Poem copied successfully, my love!");
+        }
+
+        document.getElementById('endHeart').addEventListener('click', function () {
+            var heading = document.getElementById('mainHeading');
+            // Toggle between the original title and the new text
+            if (heading.innerHTML === "To Her") {
+                heading.innerHTML = "You are and forever will be my muse, my motivation, my reason.<br>I'm so thankful for you and so extremely lucky to have you <3";
+            } else {
+                heading.innerHTML = "To Her";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

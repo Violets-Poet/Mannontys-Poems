@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/flower.png" type="image/png">
+    <link rel="stylesheet" href="./styles_Poems.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>A Sight That Makes My Heart Melt</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title" id="mainHeading">A Sight That Makes My Heart Melt</h1>
+
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+
+                    <!-- Add the decorated month -->
+                    <div class="decorated-text">December</div>
+
+                    <div class="inner-container">
+                        <p>A sight that makes my heart melt
+                            <br>
+                            It makes it bleed, it makes it pelt.
+                            <br>
+                            My eyes can’t wander off of you,
+                            <br>
+                            They’d rather see no other view.
+                            <br>
+                            <br>
+                            In the sun I waited hours,
+                            <br>
+                            But at the mere thought of you, time cowers
+                            <br>
+                            Nowhere I’d rather be, nothing could compare,
+                            <br>
+                            To being with you, a happiness so rare.
+                            <br>
+                            <br>
+                            As we walked, I shoved away,
+                            <br>
+                            Thoughts and feelings I mustn’t say
+                            <br>
+                            You maybe noticed, I think you did,
+                            <br>
+                            I told them to, but they never hid.
+                            <br>
+                            <br>
+                            Wearing blue, or any other color,
+                            <br>
+                            You make them erupt, you make them holler.
+                            <br>
+                            Oh to study you, oh to become a scholar.
+                            <br>
+                            <br>
+                            You told me to keep my thoughts in a cage,
+                            <br>
+                            But your beauty is a fact that must take stage.
+                            <br>
+                            You can’t possibly know how beautiful you are
+                            <br>
+                            Or how your challenge gave my heart a scar,
+                            <br>
+                            One that I’ll worship, and without a grain of shame,
+                            <br>
+                            If you saw what I see, you’d feel the same.
+                            <br>
+                            <br>
+                            A sight that makes my heart melt,
+                            <br>
+                            It makes my mind freeze, it makes it welt,
+                            <br>
+                            Unlike you, flower, you’re evergreen.
+                            <br>
+                            I love you and I wish to come clean.
+                            <br>
+                            <p class="endHeart"><span id="endHeart">🤍</span></p>
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="navigation-links">
+                        <a href="./convWMoon.html"><i class="fa-solid fa-left-long"></i></a>
+                        <button class="flowerBtn" onclick="handleClick()">
+                            <img src="../assets/flower.png" alt="" id="flower_btn_icon">
+                        </button>
+                        <a href="./Narcissus.html"><i class="fa-solid fa-right-long"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        };
+
+        let clickTimer;
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+            if (clickCount === 1) {
+                clickTimer = setTimeout(function () {
+                    // Single-click detected, execute the redirect
+                    window.location.href = "../flower.html";
+                    clickCount = 0; // Reset the click count
+                }, 300); // Delay for detecting a double-click
+            } else if (clickCount === 2) {
+                clearTimeout(clickTimer); // Prevent the redirect if it's a double-click
+                copyToClipboard();
+                clickCount = 0; // Reset the click count
+            }
+        }
+
+        function copyToClipboard() {
+            const textToCopy = document.getElementById('translucentBox').innerText;
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            console.log("Poem copied successfully, my love!");
+        }
+
+
+        
+        document.getElementById('endHeart').addEventListener('click', function () {
+            var heading = document.getElementById('mainHeading');
+            // Toggle between the original title and the new text
+            if (heading.innerHTML === "A Sight That Makes My Heart Melt") {
+                heading.innerHTML = "Although purple is my favorite color, I'd always chose blue<br>Because it reminds me of you, and Oh! How much do I love you!";
+            }else if(heading.innerHTML === "Although purple is my favorite color, I'd always chose blue<br>Because it reminds me of you, and Oh! How much do I love you!"){
+                heading.innerHTML = "I love you so much ya Mannonty,<br>you have no idea how gorgeous and perfect you are in my eyes or how much I mean it every time I call you beautiful💙";
+                heading.classList.toggle("long_secret_message");
+            }else{
+                heading.innerHTML = "A Sight That Makes My Heart Melt";
+                heading.classList.toggle("long_secret_message");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
