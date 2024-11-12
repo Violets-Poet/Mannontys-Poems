@@ -144,8 +144,10 @@
             // Toggle between the original title and the new text
             if (heading.innerHTML === "To Her") {
                 heading.innerHTML = "You are and forever will be my muse, my motivation, my reason.<br>I'm so thankful for you and so extremely lucky to have you <3";
+                heading.classList.toggle("long_secret_message");
             } else {
                 heading.innerHTML = "To Her";
+                heading.classList.toggle("long_secret_message");
             }
         });
     </script>
