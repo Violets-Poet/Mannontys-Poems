@@ -176,11 +176,11 @@ h1 {
     .translucent-box {
         top: 60%;
         overflow-y: auto;
-        max-height: 40vh;
+        max-height: 45vh;
     }
     
    .inner-container{
-       max-height: 25vh;
+       max-height: 32vh;
    }
 
     .title {
