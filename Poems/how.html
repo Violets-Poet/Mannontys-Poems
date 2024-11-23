@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/flower.png" type="image/png">
+    <link rel="stylesheet" href="./styles_Poems.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>I love you, how could I not?</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title" id="mainHeading">I love you, how could I not?</h1>
+
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+
+                    <div class="decorated-text">April</div>
+                    <div class="inner-container">
+
+                    <p>
+                        I love you, of course I love you.<br>
+                        I love you, how could I not?<br>
+                        <br>
+                        When you’re that beautiful, when you’re that smart,<br>
+                        I love you, how could I not.<br>
+                        When every word you say is like a song,<br>
+                        When every thought you propose is like a puzzle,<br>
+                        I love you, how could I not.<br>
+                        <br>
+                        When you make me feel this way,<br>
+                        When you look at me that way,<br>
+                        I love you, how could I not.<br>
+                        When you’re eyes kidnap me away<br>
+                        To worlds beyond heaven,<br>
+                        When they drain my tiredness away<br>
+                        And seal me in tranquility.<br>
+                        When they erase the whole world,<br>
+                        And create it anew,<br>
+                        When they show me us together,<br>
+                        When it’s just me and you,<br>
+                        I love you, how could I not,<br>
+                        <br>
+                        When your smile is the most precious thing in the world,<br>
+                        When your laughter reverberates through my heart,<br>
+                        I love you, how could I not.<br>
+                        When your face is a work of art,<br>
+                        That could only be made by the divine brush of God,<br>
+                        I love you, how could I not.<br>
+                        <br>
+                        When you’re lips are so captivating,<br>
+                        When they’re so inviting, so hypnotic,<br>
+                        When they look tastier than the forbidden fruit,<br>
+                        I love you, how could I not,<br>
+                        When your body heat is warmth, while other people’s burn,<br>
+                        When I want to hold you close, when your touch I yearn,<br>
+                        I love you, how could I not.<br>
+                        <br>
+                        When you outshine even the sun,<br>
+                        When you’re prettier than the moon,<br>
+                        When you’re more majestic than stars,<br>
+                        When your gravity is more than a black hole,<br>
+                        I love you, how could I not.<br>
+                        When you’re more than I ever could’ve imagined<br>
+                        When you make me feel happier than humanly possible,<br>
+                        I love you, how could I not.<br>
+                        <br>
+                        "Were we ever truly just friends?”<br>
+                        You’re right, we never were,<br>
+                        We’re always destined to be more,<br>
+                        You’re my best friends, my life, my everything<br>
+                        Oh, how much I love you, oh how could I not?<br>
+                        When everything you do makes me fall in love with you,<br>
+                        Just telling me about your day,<br>
+                        Or sitting in silence, I always want you to stay,<br>
+                        When I could never bear for you to be away,<br>
+                        I love you. I love you. I love you. How could I not?<br>
+                        
+                    <p class="endHeart"><span id="endHeart">🤍</span></p></p>
+                    
+                    </div>
+                    <hr>
+
+                    <div class="navigation-links">
+                        <a href="./Narcissus.html"><i class="fa-solid fa-left-long"></i></a>
+                        <button class="flowerBtn" onclick="handleClick()">
+                            <img src="../assets/flower.png" alt="" id="flower_btn_icon">
+                        </button>
+                        <a href="./beautifulMind.html"><i class="fa-solid fa-right-long"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        };
+
+        let clickTimer;
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+            if (clickCount === 1) {
+                clickTimer = setTimeout(function () {
+                    // Single-click detected, execute the redirect
+                    window.location.href = "../flower.html";
+                    clickCount = 0; // Reset the click count
+                }, 300); // Delay for detecting a double-click
+            } else if (clickCount === 2) {
+                clearTimeout(clickTimer); // Prevent the redirect if it's a double-click
+                copyToClipboard();
+                clickCount = 0; // Reset the click count
+            }
+        }
+
+        function copyToClipboard() {
+            const textToCopy = document.getElementById('translucentBox').innerText;
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            console.log("Poem copied successfully, my love!");
+        }
+
+        document.getElementById('endHeart').addEventListener('click', function () {
+            var heading = document.getElementById('mainHeading');
+            // Toggle between the original title and the new text
+            if (heading.innerHTML === "I love you, how could I not?") {
+                heading.innerHTML = "You're my everything ya yomnetty,<br>ya mannonty, ya nomnetty, ya monnety<br>ya monmon, ya nomnom, ya yomyom<br>ya yomyomnetty, bgd bgd bahebek aktar💙";
+                heading.classList.toggle("long_secret_message");
+            } else {
+                heading.innerHTML = "I love you, how could I not?";
+                heading.classList.toggle("long_secret_message");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

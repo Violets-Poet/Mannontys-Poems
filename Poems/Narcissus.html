@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/flower.png" type="image/png">
+    <link rel="stylesheet" href="./styles_Poems.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>Narcissus' Tale</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title" id="mainHeading">Narcissus' Tale</h1>
+
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+
+                    <div class="decorated-text">March</div>
+                    <div class="inner-container">
+
+                    <p>
+                        A lot is in my heart, locked up by your command<br>
+                        Now that it’s free, it’ll drown the entire land.<br>
+                        I thought about your love, untangled each strand,<br>
+                        And I realized it’s endless, eternal, all of time it spanned.<br>
+                        So I’ll start with an old tale, one that you know well,<br>
+                        Or do you? Not really, only half of it mademoiselle.<br>
+                        <br>                    
+                        Not so long ago, or maybe it was, I can’t tell,<br>
+                        In your charm time lost meaning, I’ve fallen under a spell.<br>
+                        Fixed to a mere image, the hero under a curse fell,<br>
+                        Revenge by a goddess, he’d soon be an empty shell.<br>
+                        Or so the story goes, little do people know,<br>
+                        He wasn’t the fairest of them all, it was you who’d always glow.<br>
+                        <br>
+                        Across the pond, a melody broke his gaze,<br>
+                        He heard your laughter, oh who wouldn’t it amaze.<br>
+                        It’s a song as soft as a flower,<br>
+                        Even your voice, a symphony so sweet,<br>
+                        Played by angels, in every heart it takes a seat.<br>
+                        <br>
+                        Then your sight caught his eyes,<br>
+                        Your grace renders the gods no more than flies.<br>
+                        The curse was broken, your beauty was the cure<br>
+                        Oh but it wasn’t, it was just one more curse he’d endure.<br>
+                        <br>
+                        He watched as under your touch flowers bloomed,<br>
+                        None like he’d ever seen before, he was raptly consumed.<br>
+                        With petals white as moonlit snow, heart of vibrant gold,<br>
+                        The flower stood in grace holding stories to be told.<br>
+                        Its slender stem, a tender green, holds up the fragrant bloom,<br>
+                        A beacon of the coming spring, dispelling winter’s gloom.<br>
+                        More beautiful than the gods’ creation, after all it was perfect you,<br>
+                        Who made it into your picture, of your elegance, it reflected just a clue.<br>
+                        <br>
+                        Chasing after you as fas as he could,<br>
+                        Then he passed the flowers and he stood.<br>
+                        In the breeze their scent flew,<br>
+                        He realised he would never be worthy of you,<br>
+                        and he stuck next to the flowers like glue.<br>
+                        <br>
+                        In an attempt to etch your beauty in his mind,<br>
+                        He scratched away his eyes until he turned himself blind.<br>
+                        After you, no other thing is worth seeing,<br>
+                        In your presence, everything else's beauty is fleeing.<br>
+                        <br>
+                        People came and saw the flowers next to him,<br>
+                        After his false charms, they turned it into an eponym.<br>
+                        <br>
+                        Eons later, the heroes have changed,<br>
+                        So did your beauty, like fine wine it aged.<br>
+                        Although seemingly impossible,<br>
+                        You get more perfect each day,<br>
+                        Even to a blind person it's cogniscible,<br>
+                        You lead my mind astray.<br>
+                        <br>
+                        With you, I became obsessed,<br>
+                        Now I'm flooding with feelings I have supressed.<br>
+                        Just like the previous one, I'm unworthy, I know,<br>
+                        But I hope to one day be, I hope to one day grow.<br>
+                        <br>
+                        I know you weren't his, or anyone's before,<br>
+                        But I hope to call you mine,<br>
+                        I wish you call you mine,<br>
+                        I hope it isn't a chore.<br>
+                        <br>
+                        Even if you aren't, I'll forever be yours,<br>
+                        Your perfection my mind forever adores.<br>
+                        And I'll always love you,<br>
+                        So much you won't have a clue,<br>
+                        Be it in brown or blue,<br>
+                        Without you I'm nothing, I assure you it's true.<br>
+                        <br>
+                        A lot is in my heart, now pouring by your command,<br>
+                        The start of a new tale, that'll be heard all over the land,<br>
+                        I think about your love, contemplate each strand,<br>
+                        I'm sure it's you and I, it was already preplanned.<br>
+
+                    <p class="endHeart"><span id="endHeart">🤍</span></p></p>
+                    
+                    </div>
+                    <hr>
+
+                    <div class="navigation-links">
+                        <a href="./aSight.html"><i class="fa-solid fa-left-long"></i></a>
+                        <button class="flowerBtn" onclick="handleClick()">
+                            <img src="../assets/flower.png" alt="" id="flower_btn_icon">
+                        </button>
+                        <a href="./how.html"><i class="fa-solid fa-right-long"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        };
+
+        let clickTimer;
+        let clickCount = 0;
+
+        function handleClick() {
+            clickCount++;
+            if (clickCount === 1) {
+                clickTimer = setTimeout(function () {
+                    // Single-click detected, execute the redirect
+                    window.location.href = "../flower.html";
+                    clickCount = 0; // Reset the click count
+                }, 300); // Delay for detecting a double-click
+            } else if (clickCount === 2) {
+                clearTimeout(clickTimer); // Prevent the redirect if it's a double-click
+                copyToClipboard();
+                clickCount = 0; // Reset the click count
+            }
+        }
+
+        function copyToClipboard() {
+            const textToCopy = document.getElementById('translucentBox').innerText;
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            console.log("Poem copied successfully, my love!");
+        }
+
+        document.getElementById('endHeart').addEventListener('click', function () {
+            var heading = document.getElementById('mainHeading');
+            // Toggle between the original title and the new text
+            if (heading.innerHTML === "Narcissus' Tale") {
+                heading.innerHTML = "Your goregousness and intelligence make you truly worthy of being narcisstic ya yomnetty💙";
+            } else if (heading.innerHTML === "Your goregousness and intelligence make you truly worthy of being narcisstic ya yomnetty💙") {
+                heading.innerHTML = "For all eternity and since the start of time, I belong with you in every single life. Bahebek ya mannonty <3";
+            } else {
+                heading.innerHTML = "Narcissus' Tale";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
